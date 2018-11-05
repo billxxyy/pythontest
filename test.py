@@ -10,8 +10,7 @@ complist = industry[industry['c_name']=='钢铁行业']
 fininfo = ts.get_stock_basics()
 
 fininfop = fininfo[fininfo.index.isin(complist['code'])]
-fininfop.to_excel(r"/home/shawnxiao/test/industry.xlsx", "infop")
+fininfop.to_excel(r"/home/shxiao/industry.xlsx", "infop")
 
 plt.plot(fininfop.index, fininfop['pe'])
 plt.show()
-
